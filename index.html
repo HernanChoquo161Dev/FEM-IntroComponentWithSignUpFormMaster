@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!--main page-->
+  <div class="main-page">
+    <!--component-->
+    <div class="intro-component">
+      <!--text section-->
+      <div class="intro-component__text-box">
+        <h1 class="intro-component__tittle">
+          Learn to code by watching others
+        </h1>
+        <p class="intro-component__text">
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.
+        </p>
+      </div>
+      <!--form section-->
+      <div class="intro-component__box-form">
+        <!--offer block-->
+        <div class="offer">
+          <h1 class="offer__text">
+            Try it free 7 days 
+            <span class="offer__text-light">then $20/mo. thereafter</span> 
+          </h1>
+        </div>
+        <!--form block-->
+        <form action="#" class="form-master">
+          <!--input block-->
+          <div class="input-check input-check--margin">
+            <input type="text" class="input-check__input" placeholder="First Name">
+            <img src="./images/icon-error.svg" alt="image-alert" class="input-check__image-alert">
+            <p class="input-check__text-alert">
+              First name cannot be empty
+            </p>
+          </div>
+          <div class="input-check input-check--margin">
+            <input type="text" class="input-check__input" placeholder="First Name">
+            <img src="./images/icon-error.svg" alt="image-alert" class="input-check__image-alert">
+            <p class="input-check__text-alert">
+              Last name cannot be empty
+            </p>
+          </div>
+          <div class="input-check input-check--margin">
+            <input type="text" class="input-check__input" placeholder="Email Address">
+            <img src="./images/icon-error.svg" alt="image-alert" class="input-check__image-alert">
+            <p class="input-check__text-alert">
+              Looks like this is not an email
+            </p>
+          </div>
+          <div class="input-check">
+            <input type="text" class="input-check__input" placeholder="Password">
+            <img src="./images/icon-error.svg" alt="image-alert" class="input-check__image-alert">
+            <p class="input-check__text-alert">
+              Password cannot be empty
+            </p>
+          </div>
+          <!--sign up section-->
+          <button class="form-master__sign-up">Claim your free trial</button>
+          <p class="form-master__terms">
+            By clicking the button, you are agreeing to our 
+            <a href="" class="form-master__link-terms">Terms and Services</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
