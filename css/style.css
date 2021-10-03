@@ -93,7 +93,8 @@ body {
   font-size: 1.5rem;
 }
 .offer__text-light {
-  width: 200;
+  color: var(--color-grayish-blue);
+  font-weight: 200;
 }
 /*form block*/
 .form-master {
@@ -143,18 +144,25 @@ body {
   font-weight: 700 !important;
 }
 .input-check__image-alert {
-  visibility: hidden;
+  width: 2.5rem;
+  visibility: visible;
   position: absolute;
   right: 2rem;
-  top: 1.4rem;
+  top: 0;
+  transform: translateY(50%);
 }
 .input-check__text-alert {
-  display: none;
+  display: block;
   position: relative;
 
   text-align: end;
+  color: var(--color-red);
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 600;
 
   padding: 1rem;
+  padding-bottom: 0;
 }
 .input-check--margin {
   margin-bottom: 2rem;
@@ -165,8 +173,9 @@ body {
   width: 100%;
 
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1.6rem;
   text-align: center;
+  text-transform: uppercase;
 
   padding: 1.6rem 0;
   margin: 2rem 0;
@@ -178,11 +187,13 @@ body {
 .form-master__terms {
   text-align: center;
   font-size: 1.2rem;
+  font-weight: 600;
   color: var(--color-grayish-blue);
 }
 .form-master__link-terms {
   text-decoration: none;
   color: var(--color-red);
+  font-weight: 700;
 }
 
 @media screen and (max-width: 768px) {
@@ -246,10 +257,6 @@ body {
     font-size: 1.5rem;
     letter-spacing: 1px;
   }
-  .offer__text-light {
-    color: var(--color-grayish-blue);
-    font-weight: 200;
-  }
   /*form block*/
   .form-master {
     padding: 2rem;
@@ -261,22 +268,20 @@ body {
   .input-check__input {
     padding: 2rem;
   }
+  .input-check__image-alert {
+    transform: translateY(70%);
+  }
   /*sign up section*/
   .form-master__sign-up {
     font-size: 1.5rem;
-    text-transform: uppercase;
 
     padding: 1.6rem 0;
     margin: 2rem 0;
   }
   .form-master__terms {
     font-size: 1.1rem;
-    font-weight: 500;
 
     padding: 0 2rem;
-  }
-  .form-master__link-terms {
-    font-weight: 700;
   }
 }
 @media screen and (max-width: 426px) {
