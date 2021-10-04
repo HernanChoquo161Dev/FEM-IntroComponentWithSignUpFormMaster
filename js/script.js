@@ -13,8 +13,8 @@ function alertVisible(imageAlert, textAlert, index){
 }
 
 function checkEmail(inputText, emailList){
-    for(a = 0; a < emailList.length; a++){
-        if(inputText.value.indexOf(emailList[a]) != -1){
+    for(b = 0; b < emailList.length; b++){
+        if(inputText.value.indexOf(emailList[b]) != -1){
             return true;
         }
     }
@@ -29,8 +29,7 @@ sendForm.addEventListener('click', function (event) {
             activeAlert[a] = true;
         }
 
-        if(a == 2 && inputList[a].value != ""){
-            console.log("entra")
+        if(a == 2 && inputList[a].value != "" && !activeAlert[a]){
             if(!checkEmail(inputList[a], emailList)){
                 alertVisible(imageAlert, textAlert, a);
 
@@ -42,7 +41,6 @@ sendForm.addEventListener('click', function (event) {
 
 function checkInputText(index){
     inputList[index].addEventListener("input", function(event){
-        console.log(inputList[index].value != "");
         if(inputList[index].value != "" && activeAlert[index]){
             alertVisible(imageAlert, textAlert, index);
 
@@ -55,9 +53,17 @@ function checkInputText(index){
             activeAlert[index] = true;
         }
     });
+    
+    /*text input validation*/
+    if(index == 0 || index == 1){
+        inputList[index].onkeypress = function(e) {
+            if ((e.keyCode < 65 || (e.keyCode > 90 && e.keyCode < 97) || e.keyCode > 122) && e.keyCode != 32)
+                return false;
+        };
+    }
 }
 
-for(a = 0; a < inputList.length; a++){
-    checkInputText(a);
+for(c = 0; c < inputList.length; c++){
+    checkInputText(c);
 }
 

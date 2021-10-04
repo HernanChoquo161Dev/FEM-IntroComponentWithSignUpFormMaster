@@ -216,7 +216,18 @@ body {
   color: var(--color-red);
   font-weight: 700;
 }
-
+@media screen and (max-width: 1440px) and (max-height: 680px) {
+  /*component*/
+  html {
+    font-size: 54%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /*component*/
+  html {
+    font-size: 50%;
+  }
+}
 @media screen and (max-width: 768px) {
   /*component*/
   html {
