@@ -3,6 +3,7 @@ const textAlert = document.querySelectorAll(".input-check__text-alert");
 const sendForm =  document.querySelector(".form-master__sign-up");
 const inputList = document.querySelectorAll(".input-check__input");
 
+const emailList = ["@gmail.com","@outlook.com"];
 let activeAlert = [false, false,false, false];
 
 function alertVisible(imageAlert, textAlert, index){
@@ -11,12 +12,30 @@ function alertVisible(imageAlert, textAlert, index){
     inputList[index].classList.toggle("input-check__input--alert");
 }
 
+function checkEmail(inputText, emailList){
+    for(a = 0; a < emailList.length; a++){
+        if(inputText.value.indexOf(emailList[a]) != -1){
+            return true;
+        }
+    }
+    return false;
+}
+
 sendForm.addEventListener('click', function (event) {
     for(a = 0; a < inputList.length; a++){
         if(inputList[a].value == "" && !activeAlert[a]){
             alertVisible(imageAlert, textAlert, a);
 
             activeAlert[a] = true;
+        }
+
+        if(a == 2 && inputList[a].value != ""){
+            console.log("entra")
+            if(!checkEmail(inputList[a], emailList)){
+                alertVisible(imageAlert, textAlert, a);
+
+                activeAlert[a] = true;
+            }
         }
     }
 });

@@ -123,6 +123,7 @@ body {
 }
 .input-check__input--alert {
   border: 0.2rem solid var(--color-red);
+  color: var(--color-red);
 }
 .input-check__input:focus {
   outline: none;
