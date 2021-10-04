@@ -121,6 +121,9 @@ body {
   border: 0.2rem solid var(--color-grayish-blue);
   outline: none;
 }
+.input-check__input--alert {
+  border: 0.2rem solid var(--color-red);
+}
 .input-check__input:focus {
   outline: none;
 }
@@ -145,15 +148,26 @@ body {
 }
 .input-check__image-alert {
   width: 2.5rem;
-  visibility: visible;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   right: 2rem;
   top: 0;
   transform: translateY(50%);
+
+  transition: visibility 0s, opacity 0.4s linear;
+}
+.input-check__image-alert--visible {
+  visibility: visible;
+  opacity: 1;
 }
 .input-check__text-alert {
-  display: block;
+  height: 0rem;
+  overflow: hidden;
+
   position: relative;
+
+  opacity: 0;
 
   text-align: end;
   color: var(--color-red);
@@ -163,6 +177,12 @@ body {
 
   padding: 1rem;
   padding-bottom: 0;
+
+  transition: opacity 0.4s, height 0.4s linear;
+}
+.input-check__text-alert--visible {
+  height: 2.5rem;
+  opacity: 1;
 }
 .input-check--margin {
   margin-bottom: 2rem;
